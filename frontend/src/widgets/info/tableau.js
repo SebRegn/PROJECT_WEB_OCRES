@@ -37,10 +37,10 @@ const operations = [
 ]
 
 const columns = [
-  { key: 'column1', name: 'Event', fieldName: 'event', minWidth: 100, maxWidth: 220, isResizable: true },
-  { key: 'column2', name: 'Date', fieldName: 'date', minWidth: 100, maxWidth: 150, isResizable: true },
-  { key: 'column3', name: 'Boite', fieldName: 'boite', minWidth: 100, maxWidth: 220, isResizable: true },
-  { key: 'column4', name: 'Nb Personnes', fieldName: 'nb', minWidth: 100, maxWidth: 150, isResizable: true },
+  { key: 'column1', name: 'Event', fieldName: 'event', minWidth: 100, maxWidth: 200, isResizable: true },
+  { key: 'column2', name: 'Date', fieldName: 'date', minWidth: 70, maxWidth: 200, isResizable: true },
+  { key: 'column3', name: 'Boite', fieldName: 'boite', minWidth: 70, maxWidth: 200, isResizable: true },
+  { key: 'column4', name: 'Nb Personnes', fieldName: 'nb', minWidth: 100, maxWidth: 200, isResizable: true },
 ]
 
 const Tableauevent = () => {

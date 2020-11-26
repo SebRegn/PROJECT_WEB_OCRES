@@ -1,6 +1,8 @@
 import React from 'react';
 import { Nav, initializeIcons } from '@fluentui/react';
 
+
+
 const navigationStyles = {
   root: {
     height: '100vh',
@@ -16,8 +18,8 @@ const links = [
     links: [
       {
         name: 'Dashboard',
-        key:'key1',
-        url: '/',
+        key: 'key1',
+        url: 'http://localhost:3006',
         iconProps: {
           iconName: 'News',
           styles: {
@@ -31,7 +33,7 @@ const links = [
       {
         name: 'Admin',
         key: 'key2',
-        url: '/',
+        url: 'http://localhost:3006/Admin',
         iconProps: {
           iconName: 'PlayerSettings',
           styles: {
@@ -46,15 +48,20 @@ const links = [
   },
 ];
 
-const Navigation = () => {
-  initializeIcons();
-  return (
-    <Nav
-      groups={links}
-      selectedKey='key1'
-      styles={navigationStyles}
-    />
-  );
-};
+
+class Navigation extends React.Component {
+  
+  render() {
+    initializeIcons();
+    return (
+      //<div><Button><Link to="/Admin">Admin</Link></Button>
+        <Nav
+          groups={links}
+          selectedKey='key1'
+          styles={navigationStyles}
+        />
+    );
+  }
+}
 
 export default Navigation;

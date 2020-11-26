@@ -4,13 +4,20 @@
   "private": true,
   "dependencies": {
     "@fluentui/react": "^7.153.0",
+    "@material-ui/icons": "^4.9.1",
     "@syncfusion/ej2-react-layouts": "^18.3.48",
     "@uifabric/react-cards": "^0.114.16",
     "react": "^16.11.0",
     "react-burger-menu": "^2.9.0",
     "react-dom": "^16.11.0",
+    "react-facebook": "^8.1.4",
+    "react-iframe": "^1.8.0",
+    "react-live-clock": "^5.0.12",
+    "react-picture-viewer": "^1.0.9",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.2.0",
-    "recharts": "^1.8.5"
+    "recharts": "^1.8.5",
+    "storybook": "^6.1.6"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,} from 'recharts';
 
+
 const data = [
   {
     name: '20-05-2020', Bateau1: 40, Bateau2: 26, amt: 2400,
@@ -20,7 +21,6 @@ const data = [
 ];
 
 export default class Diagramme extends PureComponent {
-  static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
 
   render() {
     return (
@@ -37,8 +37,8 @@ export default class Diagramme extends PureComponent {
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="Bateau1" stroke="#8884d8" activeDot={{ r: 8 }} />
-        <Line type="monotone" dataKey="Bateau2" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="Bateau1" stroke="green" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="Bateau2" stroke="purple" />
       </LineChart>
     );
   }
