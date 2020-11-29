@@ -50,16 +50,16 @@ const links = [
 
 
 class Navigation extends React.Component {
-  
+
   render() {
     initializeIcons();
     return (
       //<div><Button><Link to="/Admin">Admin</Link></Button>
-        <Nav
-          groups={links}
-          selectedKey='key1'
-          styles={navigationStyles}
-        />
+      <Nav
+        groups={links}
+        selectedKey='key1'
+        styles={navigationStyles}
+      />
     );
   }
 }

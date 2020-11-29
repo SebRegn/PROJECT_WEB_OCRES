@@ -15,7 +15,7 @@ serviceWorker.unregister();
 
 ReactDOM.render(
     <BrowserRouter>
-    <Route/>
+        <Route />
     </BrowserRouter>,
     document.getElementById('root')
 );

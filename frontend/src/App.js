@@ -22,45 +22,45 @@ const container2 = {
 };
 
 class App extends React.Component {
- render(){
-  return (
-    <div className="ms-Grid" dir="ltr">
-      <div className="ms-Grid-row">
-        <div className="ms-Grid-col ms-sm8 ms-xl2">
-          <Navigation />
-        </div>
-        <div className="main-element ms-Grid-col ms-sm11 ms-xl8">
-          
-          <div style={container}>
-              <div style={container}> 
-              <Heure />
-              </div>
-              <Musique/>
+  render() {
+    return (
+      <div className="ms-Grid" dir="ltr">
+        <div className="ms-Grid-row">
+          <div className="ms-Grid-col ms-sm8 ms-xl2">
+            <Navigation />
           </div>
+          <div className="main-element ms-Grid-col ms-sm11 ms-xl8">
 
-          <div className="ms-Grid-row">
-            <div style={container2}>
-              <Diagramme />
-            </div>
-          </div>
-
-          
             <div style={container}>
-              <div style={container2}> 
-              <SimpleDemo />
+              <div style={container}>
+                <Heure />
+              </div>
+              <Musique />
+            </div>
+
+            <div className="ms-Grid-row">
+              <div style={container2}>
+                <Diagramme />
+              </div>
+            </div>
+
+
+            <div style={container}>
+              <div style={container2}>
+                <SimpleDemo />
               </div>
               <Tableauevent />
-             
-            </div>
-            
-         
-          <div style={container}><Publi /></div> </div>
 
-        
+            </div>
+
+
+            <div style={container}><Publi /></div> </div>
+
+
+        </div>
       </div>
-    </div>
-  );
-}
+    );
+  }
 }
 export default App;
 

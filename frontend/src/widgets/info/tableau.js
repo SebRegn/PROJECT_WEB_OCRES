@@ -57,16 +57,16 @@ class Tableauevent extends React.Component {
             items={operations}
             columns={columns}
             selectionMode={0}
-            onRenderRow={ (props, defaultRender) => (
+            onRenderRow={(props, defaultRender) => (
               <div className={props.item.bateau} >
-                {defaultRender({...props, className: props.item.bateau})}            
+                {defaultRender({ ...props, className: props.item.bateau })}
               </div>
-              ) }
+            )}
           />
         </div>
       </div>
     );
-};
+  };
 }
 
 export default Tableauevent;

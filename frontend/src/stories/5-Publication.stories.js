@@ -5,5 +5,5 @@ export default {
   title: 'Publication',
 };
 
-export const text = () => <Publi/>;
+export const text = () => <Publi />;
 

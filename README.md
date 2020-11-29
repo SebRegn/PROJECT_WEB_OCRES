@@ -2,13 +2,21 @@
 
 # Membres
 Tescelin HANOTEAUX
-Sebastien Regnier
+Sebastien REGNIER
 
 # Despcription
 Nous avons pour ambition de réaliser la dashboard d'une entreprise travaillant dans l'evènementiel à l'aide de leurs bateaux mouches. 
-Ce dashboard sera composé de 6 widgets présentants chacun une ou des informations concernant les réalisations de l'entreprise. Ils seront actualisable en temps réel grace aux informations transmises par la la base de données.
+Ce dashboard sera composé de 6 widgets présentants chacun une ou des informations concernant les réalisations de l'entreprise. Ils seront actualisable en temps réel grâce aux informations transmises par les bases de données.
 
 # Documentation
+https://recharts.org/en-US
+https://www.blog.duomly.com
+https://appdividend.com
+https://antonyorenge.com
+https://www.microsoft.com/fr-fr/
+La page facebook qui nous sert à présenter l'entreprise
+Ainsi que l'ensemble des cours d'Adrien
+
 
 # Problèmes difficultés
 

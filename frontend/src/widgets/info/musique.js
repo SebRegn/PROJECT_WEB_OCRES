@@ -1,18 +1,17 @@
 import Iframe from 'react-iframe'
 import React from 'react';
 
-class Musique extends React.Component{
+class Musique extends React.Component {
 
-    render()
-    {
-        return(
-            <Iframe 
-            src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" 
-            width="300" 
-            height="80" 
-            frameborder="0" 
-            allowtransparency="true" 
-            allow="encrypted-media">
+    render() {
+        return (
+            <Iframe
+                src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3"
+                width="300"
+                height="80"
+                frameborder="0"
+                allowtransparency="true"
+                allow="encrypted-media">
             </Iframe>
         )
     }
