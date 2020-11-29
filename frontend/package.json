@@ -7,6 +7,7 @@
     "@material-ui/icons": "^4.9.1",
     "@syncfusion/ej2-react-layouts": "^18.3.48",
     "@uifabric/react-cards": "^0.114.16",
+    "rc-checkbox": "^2.3.1",
     "react": "^16.11.0",
     "react-burger-menu": "^2.9.0",
     "react-dom": "^16.11.0",

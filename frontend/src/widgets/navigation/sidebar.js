@@ -19,7 +19,7 @@ const links = [
       {
         name: 'Dashboard',
         key: 'key1',
-        url: 'http://localhost:3006',
+        url: '/',
         iconProps: {
           iconName: 'News',
           styles: {
@@ -33,7 +33,7 @@ const links = [
       {
         name: 'Admin',
         key: 'key2',
-        url: 'http://localhost:3006/Admin',
+        url: '/Admin',
         iconProps: {
           iconName: 'PlayerSettings',
           styles: {

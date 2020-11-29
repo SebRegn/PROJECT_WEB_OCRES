@@ -10,7 +10,7 @@ class Heure extends React.Component {
         <h1><Clock 
         format={'HH:mm:ss'} 
         ticking={true} 
-        timezone={'US/Pacific'}
+        timezone={'EU/Pacific'}
          >
         </Clock></h1>
         )

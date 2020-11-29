@@ -7,6 +7,7 @@ import Diagramme from './widgets/info/diagramme';
 import Musique from './widgets/info/musique';
 import Heure from './widgets/info/heure';
 import Publi from './widgets/info/publication';
+import SimpleDemo from './widgets/info/check';
 
 const container = {
   display: 'flex',
@@ -46,11 +47,14 @@ class App extends React.Component {
           
             <div style={container}>
               <div style={container2}> 
-              <Publi />
+              <SimpleDemo />
               </div>
               <Tableauevent />
+             
             </div>
-          </div>
+            
+         
+          <div style={container}><Publi /></div> </div>
 
         
       </div>
