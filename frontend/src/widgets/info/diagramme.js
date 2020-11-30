@@ -25,11 +25,11 @@ export default class Diagramme extends PureComponent {
   render() {
     return (
       <LineChart
-        width={700}
-        height={300}
+        width={600}
+        height={280}
         data={data}
         margin={{
-          top: 5, right: 30, left: 20, bottom: 5,
+          top: 5, bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />

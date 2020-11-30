@@ -26,35 +26,40 @@ class App extends React.Component {
     return (
       <div className="ms-Grid" dir="ltr">
         <div className="ms-Grid-row">
-          <div className="ms-Grid-col ms-sm8 ms-xl2">
+          <div className="ms-Grid-col ms-sm3 ms-xl2">
             <Navigation />
           </div>
-          <div className="main-element ms-Grid-col ms-sm11 ms-xl8">
 
-            <div style={container}>
-              <div style={container}>
+
+          <div className=" ms-Grid-col ms-sm7 ms-xl10">
+
+            <div style={container} className="ms-Grid-row ">
+              <div style={container} className="ms-Grid-row ">
                 <Heure />
-              </div>
+              </div >
               <Musique />
             </div>
 
-            <div className="ms-Grid-row">
+          <div className=" ms-Grid-col ms-lg12  ms-xxl8">
+            <div className="ms-Grid-col">
               <div style={container2}>
                 <Diagramme />
               </div>
             </div>
-
-
-            <div style={container}>
-              <div style={container2}>
-                <SimpleDemo />
-              </div>
+          
+            <div style={container} className="ms-Grid-col ">
               <Tableauevent />
-
             </div>
+            <div style={container2} className="ms-Grid-col ">
+                <SimpleDemo />
+            </div>
+          </div>
 
+          <div className=" ms-Grid-col ms-lg12  ms-xxl4">
+            <div style={container} className="ms-Grid-col "><Publi /></div> 
+          </div>
 
-            <div style={container}><Publi /></div> </div>
+          </div>
 
 
         </div>
