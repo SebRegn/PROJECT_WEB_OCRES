@@ -1,3 +1,6 @@
+
+const db= require("./connect_db/connection");
+
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
@@ -17,3 +20,4 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
 module.exports = app;
+
