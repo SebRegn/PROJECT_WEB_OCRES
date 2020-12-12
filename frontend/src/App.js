@@ -3,11 +3,12 @@ import 'office-ui-fabric-react/dist/css/fabric.css';
 import './App.css';
 import Navigation from './widgets/navigation/sidebar';
 import Tableauevent from './widgets/info/tableau';
-import Diagramme from './widgets/info/diagramme';
 import Musique from './widgets/info/musique';
 import Heure from './widgets/info/heure';
 import Publi from './widgets/info/publication';
 import SimpleDemo from './widgets/info/check';
+import Test from './widgets/info/test';
+
 
 const container = {
   display: 'flex',
@@ -43,7 +44,7 @@ class App extends React.Component {
           <div className=" ms-Grid-col ms-lg12  ms-xxl8">
             <div className="ms-Grid-col">
               <div style={container2}>
-                <Diagramme />
+              <Test/>
               </div>
             </div>
           

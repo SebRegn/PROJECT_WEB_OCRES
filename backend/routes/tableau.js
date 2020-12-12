@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 const {connected} = require("../db");
 
-router.get("/", async function (req, res, next) {
+router.get("/", async function (req, res) {
   try {
     const db = connected.db("Tableau");
     const collections = await db.collection("operations").find().toArray();
