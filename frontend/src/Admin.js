@@ -2,6 +2,7 @@ import React from 'react';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import './App.css';
 import Navigation from './widgets/navigation/sidebar';
+import CreateEvent from './forms/create_event'
 
 const container = {
   display: 'flex',
@@ -21,7 +22,8 @@ class Admin extends React.Component {
           </div>
           <div className="main-element ms-Grid-col ms-sm11"></div>
 
-          <div style={container}>
+          <CreateEvent/>
+          {/* <div style={container}>
 
             <form>
               <div className="form-group">
@@ -43,7 +45,8 @@ class Admin extends React.Component {
               <div className="form-group"><button className="btn btn-primary btn-block" type="button">Ajouter</button></div>
             </form>
 
-          </div></div>
+          </div> */}
+        </div>
       </div>
     )
   }

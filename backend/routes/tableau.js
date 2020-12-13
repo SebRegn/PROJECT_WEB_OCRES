@@ -14,4 +14,17 @@ router.get("/", async function (req, res) {
   }
 });
 
+
+router.post("/add", async function (req, res) {
+  try {
+    const db = connected.db("Tableau");
+    const result = await db.collection("operations").insertOne(req.body);
+
+    res.json(result);
+  } catch (e) {
+    console.error(e);
+    res.json(e);
+  }
+});
+
 module.exports = router;
