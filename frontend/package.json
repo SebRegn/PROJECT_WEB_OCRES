@@ -8,6 +8,7 @@
     "@material-ui/icons": "^4.9.1",
     "@syncfusion/ej2-react-layouts": "^18.3.48",
     "@uifabric/react-cards": "^0.114.16",
+    "axios": "^0.21.0",
     "chart.js": "^2.9.4",
     "clsx": "^1.1.1",
     "moment": "^2.29.1",
