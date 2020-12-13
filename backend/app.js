@@ -9,6 +9,7 @@ const bodyParser= require('body-parser')
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var tableauRouter = require("./routes/tableau");
+var affluanceRouter = require("./routes/affluance");
 const { run, connected } = require("./db");
 
 var app = express();
@@ -26,6 +27,7 @@ run().then(connected => {
     app.use("/", indexRouter);
     app.use("/users", usersRouter);
     app.use("/tableau", tableauRouter);
+    app.use("/affluance", affluanceRouter);
 
 app.listen(port,() => {console.log(`App listening at http://localhost:${port}`);
 

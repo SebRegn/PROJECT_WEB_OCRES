@@ -2,13 +2,14 @@ import React from 'react';
 import 'office-ui-fabric-react/dist/css/fabric.css';
 import './App.css';
 import Navigation from './widgets/navigation/sidebar';
-import CreateEvent from './forms/create_event'
+import CreateEvent from './forms/create_event';
+import AddAffluance from './forms/add_affluance';
 
-const container = {
-  display: 'flex',
-  justifyContent: 'center',
-  margin: '1em auto 0',
-};
+// const container = {
+//   display: 'flex',
+//   justifyContent: 'center',
+//   margin: '1em auto 0',
+// };
 
 
 class Admin extends React.Component {
@@ -17,12 +18,16 @@ class Admin extends React.Component {
 
       <div className="ms-Grid" dir="ltr">
         <div className="ms-Grid-row">
-          <div className="ms-Grid-col ms-sm8 ms-xl2">
+          <div className="ms-Grid-col ms-sm3 ms-xl2">
             <Navigation />
           </div>
-          <div className="main-element ms-Grid-col ms-sm11"></div>
+          <div className=" ms-Grid-col ms-sm9  ms-xl10">
 
-          <CreateEvent/>
+            {/* <div className="ms-Grid-row"> */}
+              <div className="= ms-Grid-col "><CreateEvent/></div>
+              <div className="= ms-Grid-col "><AddAffluance/></div>
+            {/* </div> */}
+          </div>
           {/* <div style={container}>
 
             <form>

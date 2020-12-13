@@ -1,54 +1,95 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, } from 'recharts';
+import axios from 'axios';
+import {
+  Card,
+  CardHeader,
+  CardContent,
+} from '@material-ui/core';
 
 
+class Diagramme extends React.Component {
 
-const Diagramme = ({ className, ...rest }) => {
-  const [nb, setData] = useState({});
+  constructor(props) {
+    super(props);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const fetchedData = await fetch('http://localhost:8000/tableau', {
-        method: 'GET'
-      });
+    this.state = {affluance: []};
+  }
 
-      const jsonData = await fetchedData.json();
+  
 
-      const nb = jsonData.reduce(
-        (acc, amount) => [...acc, amount.nb],
-        []
-      );
+  componentDidMount() {
+    axios.get('http://localhost:8000/affluance/')
+      .then(response => {
+        this.setState({ affluance: response.data })
+        console.log(this.state.affluance);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
 
-      setData({
-        datasets: [
-          {
-            name: '20-05-2020', Bateau1: nb.reverse(), Bateau2: 26, amt: 2400,
-          }
-        ],
 
-      });
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const fetchedData = await fetch('http://localhost:8000/affluance', {
+  //       method: 'GET'
+  //     });
 
-    fetchData();
-  }, []);
+  //     const affluance = await fetchedData.json();
 
-  return (
-    <LineChart
-      width={600}
-      height={280}
-      data={nb}
-      margin={{
-        top: 5, bottom: 5,
-      }}
-    >
-      <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
-      <YAxis />
-      <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="Bateau1" stroke="green" activeDot={{ r: 8 }} />
-      <Line type="monotone" dataKey="Bateau2" stroke="purple" />
-    </LineChart>
-  );
+  //     // const nb = jsonData.reduce(
+  //     //   (acc, amount) => [...acc, amount.nb],
+  //     //   []
+  //     // );
+
+  //     setData({
+  //       datasets: [
+  //         {data: affluance}
+  //       ],
+
+  //     });
+  //   };
+
+  //   fetchData();
+
+  //   return fetchedData;
+
+  // }, []);
+
+
+  // const data = [{name: '20/02/14', poseidon: 500, mercure: 320, },
+  //               {name: '21/02/14', poseidon: 400, mercure: 500, },
+  //               {name: '22/02/14', poseidon: 200, mercure: 300, },
+  //               {name: '23/02/14', poseidon: 450, mercure: 250, },
+  //               {name: '24/02/14', poseidon: 430, mercure: 460, },
+  //             ];
+  render() {
+
+    return (
+      <Card >
+      <CardHeader title="Affluence" />
+      <CardContent>
+      <LineChart
+        width={600}
+        height={280}
+        data={this.state.affluance}
+        margin={{
+          top: 5, bottom: 5,
+        }}
+      >
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Legend />
+        <Line type="monotone" dataKey="poseidon" stroke="green"  />
+        <Line type="monotone" dataKey="mercure" stroke="purple" />
+      </LineChart>
+      </CardContent>
+    </Card>
+        
+    );
+  }
 }
 export default Diagramme;
