@@ -114,7 +114,7 @@ export default class CreateEvent extends Component {
         <div className="form-group">
           <label>Nombre de personnes: </label>
           <input 
-              type="text" 
+              type="number" 
               className="form-control"
               value={this.state.nb}
               onChange={this.onChangeNb}

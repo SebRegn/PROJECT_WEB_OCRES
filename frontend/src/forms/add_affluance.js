@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-// import DatePicker from 'react-datepicker';
-// import "react-datepicker/dist/react-datepicker.css";
-
 
 
 export default class AddAffluance extends Component {
@@ -63,12 +60,12 @@ export default class AddAffluance extends Component {
   render() {
     return (
     <div>
-      <h3>Affluance aujourd'hui</h3>
+      <h3>Affluence aujourd'hui</h3>
       <form onSubmit={this.onSubmit}>
         
         <div className="form-group"> 
           <label>Poseidon: </label>
-          <input  type="text"
+          <input  type="number"
               required
               className="form-control"
               value={this.state.poseidon}
@@ -77,7 +74,7 @@ export default class AddAffluance extends Component {
         </div>
         <div className="form-group"> 
           <label>Mercure: </label>
-          <input  type="text"
+          <input  type="number"
               required
               className="form-control"
               value={this.state.mercure}

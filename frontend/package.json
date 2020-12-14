@@ -9,6 +9,7 @@
     "@syncfusion/ej2-react-layouts": "^18.3.48",
     "@uifabric/react-cards": "^0.114.16",
     "axios": "^0.21.0",
+    "bootstrap-css": "^4.0.0-alpha.5",
     "chart.js": "^2.9.4",
     "clsx": "^1.1.1",
     "moment": "^2.29.1",
