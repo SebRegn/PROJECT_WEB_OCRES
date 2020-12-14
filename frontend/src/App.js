@@ -7,7 +7,8 @@ import Musique from './widgets/info/musique';
 import Heure from './widgets/info/heure';
 import Publi from './widgets/info/publication';
 import SimpleDemo from './widgets/info/check';
-import Test from './widgets/info/test';
+//import Test from './widgets/info/test';
+import Diagramme from './widgets/info/diagramme';
 
 
 const container = {
@@ -44,7 +45,7 @@ class App extends React.Component {
           <div className=" ms-Grid-col ms-lg12  ms-xxl8">
             <div className="ms-Grid-col">
               <div style={container2}>
-              <Test/>
+              <Diagramme/>
               </div>
             </div>
           

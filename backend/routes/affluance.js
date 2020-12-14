@@ -5,7 +5,7 @@ const {connected} = require("../db");
 router.get("/", async function (req, res) {
   try {
     const db = connected.db("Tableau");
-    const collections = await db.collection("operations").find().toArray();
+    const collections = await db.collection("affluance").find().toArray();
 
     res.json(collections);
   } catch (e) {
@@ -18,7 +18,7 @@ router.get("/", async function (req, res) {
 router.post("/add", async function (req, res) {
   try {
     const db = connected.db("Tableau");
-    const result = await db.collection("operations").insertOne(req.body);
+    const result = await db.collection("affluance").insertOne(req.body);
 
     res.json(result);
   } catch (e) {
