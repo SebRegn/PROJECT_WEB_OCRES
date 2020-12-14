@@ -1,45 +1,49 @@
 import React from 'react';
 import { DetailsList } from '@fluentui/react';
 import 'office-ui-fabric-react/dist/css/fabric.css';
+import axios from 'axios';
 
 
-const operations = [
-  {
-    event: 'Séminaire',
-    date: '20-05-2020',
-    boite: 'Peugeot',
-    nb: '78',
-    bateau: 'blue',
-  },
-  {
-    event: 'Pot de départ',
-    date: '03-11-2020',
-    boite: 'Apple',
-    nb: '30',
-    bateau: 'blue',
-  },
-  {
-    event: 'AfterWork',
-    date: '18-03-2021',
-    boite: 'ECE',
-    nb: '150',
-    bateau: 'yellow',
-  },
-  {
-    event: 'Anniversaire',
-    date: '28-02-2021',
-    boite: 'Particulier',
-    nb: '35',
-    bateau: 'yellow',
-  },
-  {
-    event: 'Balade découverte',
-    date: '23/24-11-2020',
-    boite: 'La ville de Paris',
-    nb: '10-60',
-    bateau: 'blue',
-  }
-]
+// const operations = [
+//   {
+//     event: 'Séminaire',
+//     date: '20-05-2020',
+//     boite: 'Peugeot',
+//     nb: '78',
+//     bateau: 'blue',
+//   },
+//   {
+//     event: 'Pot de départ',
+//     date: '03-11-2020',
+//     boite: 'Apple',
+//     nb: '30',
+//     bateau: 'blue',
+//   },
+//   {
+//     event: 'AfterWork',
+//     date: '18-03-2021',
+//     boite: 'ECE',
+//     nb: '150',
+//     bateau: 'yellow',
+//   },
+//   {
+//     event: 'Anniversaire',
+//     date: '28-02-2021',
+//     boite: 'Particulier',
+//     nb: '35',
+//     bateau: 'yellow',
+//   },
+//   {
+//     event: 'Balade découverte',
+//     date: '23/24-11-2020',
+//     boite: 'La ville de Paris',
+//     nb: '10-60',
+//     bateau: 'blue',
+//   }
+// ]
+
+
+
 
 const columns = [
   { key: 'column1', name: 'Event', fieldName: 'event', minWidth: 100, maxWidth: 200, isResizable: false },
@@ -49,12 +53,33 @@ const columns = [
 ]
 
 class Tableauevent extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {operations: []};
+  }
+
+  
+
+  componentDidMount() {
+    axios.get('http://localhost:8000/tableau/')
+      .then(response => {
+        this.setState({ operations: response.data })
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
+
+
   render() {
     return (
       <div data-is-scrollable={false}>
         <div>
           <DetailsList
-            items={operations}
+            items={this.state.operations}
             columns={columns}
             selectionMode={0}
             onRenderRow={(props, defaultRender) => (
